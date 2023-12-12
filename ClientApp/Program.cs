@@ -1,7 +1,8 @@
 ﻿using ClientApp.Configuration;
-using IdentityModel;
 using IdentityModel.Client;
 using Microsoft.Extensions.Configuration;
+using System.Net.Http.Json;
+using System.Text.Json.Serialization;
 
 var configuration = new ConfigurationBuilder()
     .SetBasePath(Directory.GetCurrentDirectory())
@@ -39,3 +40,4 @@ if (token.IsError)
 }
 
 Console.WriteLine(token.Json);
+

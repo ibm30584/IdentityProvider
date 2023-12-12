@@ -1,0 +1,11 @@
+﻿//var book = new Book(id: 42, "Title", "Author", publishedYear: 2023);
+//HttpContent content = JsonContent.Create(book, MyContext.Default.Book);
+
+//public record Book(int id, string title, string author, int publishedYear);
+//public class Book2(int id, string title, string author, int publishedYear);
+
+//[JsonSerializable(typeof(Book))]
+//[JsonSerializable(typeof(Book2))]
+//public partial class MyContext : JsonSerializerContext
+//{
+//}

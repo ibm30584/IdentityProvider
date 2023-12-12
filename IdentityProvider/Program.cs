@@ -1,19 +1,12 @@
 using IdentityProvider.Extentions;
-using IdentityProvider.Models;
+
 
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddIdentityServer()
-    .AddInMemoryIdentityResources(Configurations.IdentityResources)
-    .AddInMemoryApiScopes(Configurations.Scopes)
-    .AddInMemoryClients(Configurations.Clients)
-    .AddDeveloperSigningCredential();
-
+builder.Services.AddIdentityServerServices(builder.Configuration);
 
 var app = builder.Build();
 
-app.UseIdentityServiceResponseFormatter();
-app.UseIdentityServer();
+app.UseStaticFiles();
+app.UseIdentityServerMiddlewares();
 
 app.Run();
-

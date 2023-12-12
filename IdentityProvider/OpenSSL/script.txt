@@ -1,0 +1,19 @@
+1)generate private key and create signing request (valid for 365 days)
+openssl req -x509 -newkey rsa:2048 -keyout private-key.pem -out certificate.pem -days 365
+
+2)enter orgnization
+3S
+
+3)enter orgnization unit
+Software
+
+4)enter FQDN
+3S-Software
+
+5)combine private key and csr into self-signed certificate
+openssl pkcs12 -inkey private-key.pem -in certificate.pem -export -out certificate.pfx
+
+
+6)verify certificate
+openssl x509 -in certificate.pfx -text -noout
+
