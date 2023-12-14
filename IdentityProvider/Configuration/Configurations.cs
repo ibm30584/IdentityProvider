@@ -20,10 +20,8 @@ public static class Configurations
                 {
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
                     ClientId = "D59B5C69-AAE2-4D5D-8575-1078FBC18F4C",
-                    ClientSecrets =  {new Secret("B3AF0DF0-7447-43E9-B2C8-9305671CBBB3".Sha256()) },                    
-                    AllowedScopes = ["codes" ],
-                    allowed
-                    
+                    ClientSecrets =  {new Secret("B3AF0DF0-7447-43E9-B2C8-9305671CBBB3".Sha256()) },
+                    AllowedScopes = ["codes" ]
                 },
                 new Client
                 {
