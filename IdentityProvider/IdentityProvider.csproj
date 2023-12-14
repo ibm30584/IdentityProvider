@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
-
-  <PropertyGroup>
+	
+	<PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -12,7 +12,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="IdentityServer4" Version="4.1.2" />
+    <PackageReference Include="IdentityServer4" Version="4.1.2" />    
   </ItemGroup>
+	
+  <ItemGroup>	  
+	  <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.0" />
+	  <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.0" />
+	  <!--<SDKReference Include="Microsoft.NET.Sdk.BlazorWebAssembly"></SDKReference>-->
+  </ItemGroup>
+	
+  <ItemGroup>
+    <ProjectReference Include="..\IdentityProvider.UI\IdentityProvider.UI.csproj" />
+  </ItemGroup>
+  <PropertyGroup>
+	  <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	  <NoDefaultLaunchSettingsFile>true</NoDefaultLaunchSettingsFile>
+	  <StaticWebAssetProjectMode>Default</StaticWebAssetProjectMode>
+	  <WasmEnableWebcil>true</WasmEnableWebcil>
+  </PropertyGroup>
 
 </Project>

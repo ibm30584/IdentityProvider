@@ -30,7 +30,7 @@ var token = await client.RequestClientCredentialsTokenAsync(new ClientCredential
     Address = discovery.TokenEndpoint,
     ClientId = clientCredentialConfig.ClientId,
     ClientSecret = clientCredentialConfig.ClientSecret,
-    Scope = string.Join(" ", clientCredentialConfig.Scopes)
+    Scope = string.Join(" ", clientCredentialConfig.Scopes)    
 });
 
 if (token.IsError)
