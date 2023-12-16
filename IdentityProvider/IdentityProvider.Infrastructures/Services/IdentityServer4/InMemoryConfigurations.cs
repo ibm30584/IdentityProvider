@@ -1,8 +1,8 @@
 ﻿using IdentityServer4.Models;
 
-namespace IdentityProvider.Configuration;
+namespace IdentityProvider.Infrastructures.Services.IdentityServer4;
 
-public static class Configurations
+public static class InMemoryConfigurations
 {
     public static IdentityResource[] IdentityResources => [
         new IdentityResources.OpenId(),
@@ -16,15 +16,13 @@ public static class Configurations
 
     public static Client[] Clients => new Client[]
             {
-                new Client
-                {
+                new() {
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
                     ClientId = "D59B5C69-AAE2-4D5D-8575-1078FBC18F4C",
                     ClientSecrets =  {new Secret("B3AF0DF0-7447-43E9-B2C8-9305671CBBB3".Sha256()) },
                     AllowedScopes = ["codes" ]
                 },
-                new Client
-                {
+                new() {
                     AllowedGrantTypes = GrantTypes.Code,
                     ClientId = "E1FC0DD7-0C4E-48ED-B0D3-9CDF15546BA3",
                     AllowedScopes = ["openid", "profile", "codes"],

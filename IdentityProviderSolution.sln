@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34302.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityProvider", "IdentityProvider", "{2E69B83D-7408-4410-95A4-1D69D7A81184}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{E1555A07-EA07-4FDE-81EB-2AD3A93086EA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityProvider.Api", "IdentityProvider\IdentityProvider.Api\IdentityProvider.Api.csproj", "{0D02CC79-ACF2-47C5-B11A-9A81995D8448}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityProvider.UI", "IdentityProvider\IdentityProvider.UI\IdentityProvider.UI.csproj", "{FD05D627-9768-4BD0-B250-7AA86A701D1C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".docs", ".docs", "{A0420E80-94D2-4C3C-8C0D-E505E86CA387}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OpenSSL", "OpenSSL", "{D6368CB5-AFF5-4F2A-8ECF-DD435953C752}"
+	ProjectSection(SolutionItems) = preProject
+		Docs\OpenSSL\certificate.pem = Docs\OpenSSL\certificate.pem
+		Docs\OpenSSL\certificate.pfx = Docs\OpenSSL\certificate.pfx
+		Docs\OpenSSL\private-key.pem = Docs\OpenSSL\private-key.pem
+		Docs\OpenSSL\script.txt = Docs\OpenSSL\script.txt
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityProvider.Domain", "IdentityProvider\IdentityProvider.Domain\IdentityProvider.Domain.csproj", "{DA62392B-6F29-4E40-A974-1685A30431F1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityProvider.Application", "IdentityProvider\IdentityProvider.Application\IdentityProvider.Application.csproj", "{FC189D02-DD7A-4D48-8E1A-5028CE8BBFA5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityProvider.Infrastructures", "IdentityProvider\IdentityProvider.Infrastructures\IdentityProvider.Infrastructures.csproj", "{0F96B250-5AED-425E-93E9-2069FC176B87}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientApp", "Clients\ClientApp\ClientApp.csproj", "{2E85299C-12D5-45A4-A711-E14B370FD7E5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "Clients\WebApi\WebApi.csproj", "{2C518D8B-F143-47F7-B7E5-5A0FB36B20BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D02CC79-ACF2-47C5-B11A-9A81995D8448}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D02CC79-ACF2-47C5-B11A-9A81995D8448}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D02CC79-ACF2-47C5-B11A-9A81995D8448}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D02CC79-ACF2-47C5-B11A-9A81995D8448}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD05D627-9768-4BD0-B250-7AA86A701D1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD05D627-9768-4BD0-B250-7AA86A701D1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD05D627-9768-4BD0-B250-7AA86A701D1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD05D627-9768-4BD0-B250-7AA86A701D1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA62392B-6F29-4E40-A974-1685A30431F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA62392B-6F29-4E40-A974-1685A30431F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA62392B-6F29-4E40-A974-1685A30431F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA62392B-6F29-4E40-A974-1685A30431F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC189D02-DD7A-4D48-8E1A-5028CE8BBFA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC189D02-DD7A-4D48-8E1A-5028CE8BBFA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC189D02-DD7A-4D48-8E1A-5028CE8BBFA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC189D02-DD7A-4D48-8E1A-5028CE8BBFA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F96B250-5AED-425E-93E9-2069FC176B87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F96B250-5AED-425E-93E9-2069FC176B87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F96B250-5AED-425E-93E9-2069FC176B87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F96B250-5AED-425E-93E9-2069FC176B87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E85299C-12D5-45A4-A711-E14B370FD7E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E85299C-12D5-45A4-A711-E14B370FD7E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E85299C-12D5-45A4-A711-E14B370FD7E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E85299C-12D5-45A4-A711-E14B370FD7E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C518D8B-F143-47F7-B7E5-5A0FB36B20BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C518D8B-F143-47F7-B7E5-5A0FB36B20BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C518D8B-F143-47F7-B7E5-5A0FB36B20BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C518D8B-F143-47F7-B7E5-5A0FB36B20BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0D02CC79-ACF2-47C5-B11A-9A81995D8448} = {2E69B83D-7408-4410-95A4-1D69D7A81184}
+		{FD05D627-9768-4BD0-B250-7AA86A701D1C} = {2E69B83D-7408-4410-95A4-1D69D7A81184}
+		{D6368CB5-AFF5-4F2A-8ECF-DD435953C752} = {A0420E80-94D2-4C3C-8C0D-E505E86CA387}
+		{DA62392B-6F29-4E40-A974-1685A30431F1} = {2E69B83D-7408-4410-95A4-1D69D7A81184}
+		{FC189D02-DD7A-4D48-8E1A-5028CE8BBFA5} = {2E69B83D-7408-4410-95A4-1D69D7A81184}
+		{0F96B250-5AED-425E-93E9-2069FC176B87} = {2E69B83D-7408-4410-95A4-1D69D7A81184}
+		{2E85299C-12D5-45A4-A711-E14B370FD7E5} = {E1555A07-EA07-4FDE-81EB-2AD3A93086EA}
+		{2C518D8B-F143-47F7-B7E5-5A0FB36B20BD} = {E1555A07-EA07-4FDE-81EB-2AD3A93086EA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BFBB7CF3-95E2-4C50-87E0-CEECB0A10FE1}
+	EndGlobalSection
+EndGlobal
