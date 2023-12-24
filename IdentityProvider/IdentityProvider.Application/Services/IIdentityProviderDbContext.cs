@@ -12,6 +12,7 @@ namespace IdentityProvider.Application.Services
         DbSet<DeviceFlowCodes> DeviceFlowCodes { get; set; }
         DbSet<IdentityResource> IdentityResources { get; set; }
         DbSet<PersistedGrant> PersistedGrants { get; set; }
+        public DbSet<ClientGrantType> ClientGrantTypes { get; set; }
 
         Task<int> SaveChangesAsync();
     }

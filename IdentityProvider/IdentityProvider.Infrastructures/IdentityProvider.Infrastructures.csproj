@@ -6,7 +6,17 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Services\Persistence\PersistenceConfig\ApiResourceEntityConfig.cs" />
+    <Compile Remove="Services\Persistence\PersistenceConfig\ClientCorsOriginEntityConfig.cs" />
+    <Compile Remove="Services\Persistence\PersistenceConfig\ClientEntityConfig.cs" />
+    <Compile Remove="Services\Persistence\PersistenceConfig\ClientGrantTypeEntityConfig.cs" />
+    <Compile Remove="Services\Persistence\PersistenceConfig\DeviceFlowCodesEntityConfig.cs" />
+    <Compile Remove="Services\Persistence\PersistenceConfig\PersistedGrantEntityConfig.cs" />
+  </ItemGroup>
+
 	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="12.0.1" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -22,6 +32,10 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 	</ItemGroup>
 
 	<ItemGroup>

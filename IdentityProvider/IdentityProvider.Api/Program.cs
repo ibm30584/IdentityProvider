@@ -4,8 +4,8 @@ using IdentityProvider.Infrastructures.Services.Blazor;
 using IdentityProvider.Infrastructures.Services.IdentityCore;
 using IdentityProvider.Infrastructures.Services.IdentityServer4;
 using IdentityProvider.Infrastructures.Services.Persistence;
+using IdentityProvider.Infrastructures.Services.Persistence.PersistenceConfig;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,7 +18,7 @@ builder.Services.AddBlazor();
 builder.Services.AddDatabaseContext(
         validatedIdentityServerConfig.ConnectionString);
 builder.Services.AddIdentityCore();
-builder.Services.AddIdentityServer4(
+builder.Services.AddIdentityServer4WithStores(
         validatedIdentityServerConfig.Certificate);
 
 

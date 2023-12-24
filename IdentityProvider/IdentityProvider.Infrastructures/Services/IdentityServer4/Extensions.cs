@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using IdentityProvider.Infrastructures.Services.Persistence;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using System.Security.Cryptography.X509Certificates;
 
@@ -7,11 +8,18 @@ namespace IdentityProvider.Infrastructures.Services.IdentityServer4;
 
 public static class Extensions
 {
-    public static IServiceCollection AddIdentityServer4(this IServiceCollection services, X509Certificate2 certificate)
+    public static IServiceCollection AddIdentityServer4WithStores(this IServiceCollection services, X509Certificate2 certificate)
     {
         services.AddIdentityServer()
-            //.AddConfigurationStore<IdentityProviderDbContext>()
-            //.AddOperationalStore<IdentityProviderDbContext>()
+            .AddConfigurationStore<IdentityProviderDbContext>()
+            .AddOperationalStore<IdentityProviderDbContext>()
+            .AddSigningCredential(certificate);
+        return services;
+    }
+
+    public static IServiceCollection AddIdentityServer4InMemory(this IServiceCollection services, X509Certificate2 certificate)
+    {
+        services.AddIdentityServer()
             .AddInMemoryIdentityResources(InMemoryConfigurations.IdentityResources)
             .AddInMemoryApiScopes(InMemoryConfigurations.Scopes)
             .AddInMemoryClients(InMemoryConfigurations.Clients)
